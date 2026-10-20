@@ -115,17 +115,49 @@ export function getData(): AppData {
 
 let allStreets: StreetStat[] | null = null;
 
+/** Parse one CSV line, honouring double-quoted fields (a few street names
+ * in the source file are quoted and contain commas, so a plain split
+ * misaligns their columns). */
+function parseCsvLine(line: string): string[] {
+  const out: string[] = [];
+  let cur = "";
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (line[i + 1] === '"') {
+          cur += '"';
+          i++;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        cur += ch;
+      }
+    } else if (ch === '"') {
+      inQuotes = true;
+    } else if (ch === ",") {
+      out.push(cur);
+      cur = "";
+    } else {
+      cur += ch;
+    }
+  }
+  out.push(cur);
+  return out;
+}
+
 /** Every street in street_season.csv (the app bundle carries only the top
  * 300; search and the API serve the full list). Rows are ranked by winter
- * tickets in the file. Street names contain no commas, so a plain split is
- * safe here. */
+ * tickets in the file. */
 export function getAllStreets(): StreetStat[] {
   if (allStreets) return allStreets;
   const text = fs.readFileSync(path.join(DATA, "street_season.csv"), "utf-8");
   const lines = text.trim().split(/\r?\n/);
   const out: StreetStat[] = [];
   for (let i = 1; i < lines.length; i++) {
-    const c = lines[i].split(",");
+    const c = parseCsvLine(lines[i]);
     if (c.length < 11) continue;
     out.push({
       street: c[0],

@@ -10,7 +10,7 @@ const en = {
     line: "An open-source civic project by Nshipyard. Not affiliated with the Government of Canada or the City of Toronto.",
     badge: "Open source",
   },
-  nav: { explorer: "Streets", concentration: "Concentration", map: "Map", developers: "Developers", data: "Data", back: "All projects" },
+  nav: { explorer: "Streets", concentration: "Concentration", map: "Map", developers: "Developers", data: "Data", charts: "Charts", back: "All projects" },
   hero: {
     kicker: "Open Nshipyard · Winter street parking",
     title: "Toronto streets by winter parking revenue at risk",
@@ -62,7 +62,7 @@ const en = {
   },
   concentration: {
     kicker: "Concentration",
-    title: "How much of the city's street parking runs on how few streets.",
+    title: "A few streets carry most of the city's street parking",
     body: "A share is the fraction of all tickets in a season that were written on the busiest streets of that season. Winter and summer are ranked separately, so the same street can sit in both lists or only one. The Gini coefficient runs from 0 (tickets spread evenly over all streets) to 1 (all tickets on one street). All figures in this section are counted from the ticket files, not modelled.",
     winter: "Winter (Dec to Mar)",
     summer: "Summer (Jun to Sep)",
@@ -83,6 +83,39 @@ const en = {
     lorenzSummer: "Summer",
     lorenzX: "Top fraction of streets",
     lorenzY: "Share of tickets",
+  },
+  charts: {
+    kicker: "Charts",
+    title: "Toronto winter street parking, in charts",
+    lead: "Five charts, all drawn from this project's own street file: winter and summer ticket counts for 15,497 streets, and the meter revenue at risk model for the 368 streets where an estimate can be defended. Ticket counts are counted facts. Dollar figures are estimates from the stated model.",
+    c1: {
+      title: "Top 10 streets by winter parking tickets",
+      takeaway: "Yonge St alone took 56,769 winter tickets. The 10 streets in this chart together took 307,386, which is 15.3% of every winter ticket in the city.",
+      note: "Source: data/street_season.csv in this project, counted from City of Toronto parking tickets, winter (December to March), 2023 to 2025. Streets are ranked by their own winter ticket count.",
+    },
+    c2: {
+      title: "Winter vs summer: how tickets pile up on the top streets",
+      takeaway: "Winter pulls ahead right at the top: the top 10 streets hold 15.3% of winter tickets against 12.5% in summer, and the top 50 hold 31.6% against 28.6%. By the top 200 the two lines nearly meet, at 53.2% and 52.0%.",
+      note: "Computed street by street from data/street_season.csv: streets ranked from most to fewest tickets inside each season, then each street's tickets added up in that order. The chart shows the first 200 ranks. Winter and summer are ranked separately, so the two lines follow different sets of streets.",
+      xLabel: "Streets, ranked from most to fewest tickets",
+      yLabel: "Share of all tickets in the season",
+    },
+    c3: {
+      title: "Winter and summer tickets on the top 20 streets",
+      takeaway: "Most of these streets are busy in both seasons, and 12 of the 20 took more tickets in winter than in summer. The largest winter gap is Danforth Ave: 34,908 winter tickets against 21,951 in summer.",
+      note: "The 20 streets are the top 20 by winter tickets, from data/street_season.csv. Each street shows its own winter count (December to March) and summer count (June to September), 2023 to 2025.",
+    },
+    c4: {
+      title: "Meter revenue at risk per winter, top 10 streets",
+      takeaway: "Danforth Ave is first even though it is fourth by winter tickets, because 23,877 of its winter tickets were meter tickets, the most of any street. Its range, $19,137 to $516,712 per winter, is also the widest in the city.",
+      note: "Estimates, not counted revenue. Each bar runs from the low estimate to the high estimate of the model described under Methodology on the home page: the street's winter meter tickets, with 1.0 paid hours, 5% of meter-hours lost to snow and a $1.50 hourly rate at the low end, and 2.0 hours, 15% lost and $6.75 at the high end. Only the 368 streets with at least 100 winter meter tickets get an estimate; this chart shows the 10 largest. Source: data/street_season.csv.",
+    },
+    c5: {
+      title: "Share of all tickets on the top 10, 50 and 200 streets",
+      takeaway: "Winter is ahead at every cutoff in this chart, but the lead shrinks as the list grows: 2.8 points at the top 10, 3.0 points at the top 50, and 1.2 points at the top 200.",
+      note: "Shares counted from data/street_season.csv. Each season is ranked on its own tickets, so the winter top 10 and the summer top 10 are not the same streets.",
+      groupLabels: ["Top 10 streets", "Top 50 streets", "Top 200 streets"],
+    },
   },
   mapSection: {
     kicker: "Map",
@@ -159,7 +192,7 @@ const fr: Dict = {
     line: "Un projet civique à code source ouvert par Nshipyard. Sans affiliation avec le gouvernement du Canada ni la Ville de Toronto.",
     badge: "Code source ouvert",
   },
-  nav: { explorer: "Rues", concentration: "Concentration", map: "Carte", developers: "Développeurs", data: "Données", back: "Tous les projets" },
+  nav: { explorer: "Rues", concentration: "Concentration", map: "Carte", developers: "Développeurs", data: "Données", charts: "Graphiques", back: "Tous les projets" },
   hero: {
     kicker: "Open Nshipyard · Économie du stationnement sur rue",
     title: "Rues de Toronto selon les revenus de stationnement hivernaux à risque",
@@ -211,7 +244,7 @@ const fr: Dict = {
   },
   concentration: {
     kicker: "Concentration",
-    title: "Quelle part du stationnement sur rue tient à combien de rues.",
+    title: "Quelques rues portent la plus grande part du stationnement sur rue de la ville",
     body: "Une part est la fraction de toutes les contraventions d'une saison émises dans les rues les plus achalandées de cette saison. L'hiver et l'été sont classés séparément. Le coefficient de Gini va de 0 (contraventions réparties également entre toutes les rues) à 1 (toutes les contraventions dans une seule rue). Tous les chiffres de cette section sont comptés dans les fichiers de contraventions, pas modélisés.",
     winter: "Hiver (déc. à mars)",
     summer: "Été (juin à sept.)",
@@ -232,6 +265,39 @@ const fr: Dict = {
     lorenzSummer: "Été",
     lorenzX: "Fraction supérieure des rues",
     lorenzY: "Part des contraventions",
+  },
+  charts: {
+    kicker: "Graphiques",
+    title: "Le stationnement sur rue hivernal à Toronto, en graphiques",
+    lead: "Cinq graphiques, tous tirés du fichier de rues de ce projet : les comptes de contraventions d'hiver et d'été pour 15 497 rues, et le modèle de revenus de parcomètres à risque pour les 368 rues où une estimation peut se défendre. Les comptes de contraventions sont des faits comptés. Les montants en dollars sont des estimations du modèle énoncé.",
+    c1: {
+      title: "Les 10 rues avec le plus de contraventions de stationnement en hiver",
+      takeaway: "Yonge St à elle seule a recueilli 56 769 contraventions d'hiver. Les 10 rues de ce graphique en totalisent 307 386, soit 15,3 % de toutes les contraventions d'hiver de la ville.",
+      note: "Source : data/street_season.csv dans ce projet, compté à partir des contraventions de stationnement de la Ville de Toronto, hiver (décembre à mars), 2023 à 2025. Les rues sont classées selon leur propre nombre de contraventions d'hiver.",
+    },
+    c2: {
+      title: "Hiver contre été : comment les contraventions s'accumulent sur les rues en tête",
+      takeaway: "L'hiver prend l'avance dès le sommet : les 10 premières rues détiennent 15,3 % des contraventions d'hiver contre 12,5 % en été, et les 50 premières en détiennent 31,6 % contre 28,6 %. Aux 200 premières, les deux lignes se rejoignent presque, à 53,2 % et 52,0 %.",
+      note: "Calculé rue par rue à partir de data/street_season.csv : les rues sont classées de la plus à la moins de contraventions dans chaque saison, puis les contraventions de chaque rue sont additionnées dans cet ordre. Le graphique montre les 200 premiers rangs. L'hiver et l'été sont classés séparément, donc les deux lignes suivent des ensembles de rues différents.",
+      xLabel: "Rues, classées de la plus à la moins de contraventions",
+      yLabel: "Part de toutes les contraventions de la saison",
+    },
+    c3: {
+      title: "Contraventions d'hiver et d'été sur les 20 rues en tête",
+      takeaway: "La plupart de ces rues sont achalandées dans les deux saisons, et 12 des 20 ont reçu plus de contraventions en hiver qu'en été. Le plus grand écart hivernal est sur Danforth Ave : 34 908 contraventions d'hiver contre 21 951 en été.",
+      note: "Les 20 rues sont les 20 premières selon les contraventions d'hiver, tirées de data/street_season.csv. Chaque rue montre son propre compte d'hiver (décembre à mars) et d'été (juin à septembre), 2023 à 2025.",
+    },
+    c4: {
+      title: "Revenus de parcomètres à risque par hiver, les 10 premières rues",
+      takeaway: "Danforth Ave arrive première même si elle est quatrième pour les contraventions d'hiver, parce que 23 877 de ses contraventions d'hiver étaient des contraventions de parcomètre, le plus de toutes les rues. Sa fourchette, de 19 137 $ à 516 712 $ par hiver, est aussi la plus large de la ville.",
+      note: "Estimations, pas des revenus comptés. Chaque barre va de l'estimation basse à l'estimation haute du modèle décrit dans la section Méthodologie de la page d'accueil : les contraventions de parcomètre d'hiver de la rue, avec 1,0 heure payée, 5 % des heures de parcomètre perdues à la neige et un tarif de 1,50 $ l'heure à la borne basse, et 2,0 heures, 15 % de perte et 6,75 $ à la borne haute. Seules les 368 rues avec au moins 100 contraventions de parcomètre en hiver reçoivent une estimation; ce graphique montre les 10 plus grandes. Source : data/street_season.csv.",
+    },
+    c5: {
+      title: "Part de toutes les contraventions sur les 10, 50 et 200 premières rues",
+      takeaway: "L'hiver est devant à chaque seuil de ce graphique, mais l'avance diminue à mesure que la liste s'allonge : 2,8 points aux 10 premières, 3,0 points aux 50 premières et 1,2 point aux 200 premières.",
+      note: "Parts comptées à partir de data/street_season.csv. Chaque saison est classée selon ses propres contraventions, donc les 10 premières rues de l'hiver et celles de l'été ne sont pas les mêmes.",
+      groupLabels: ["10 premières rues", "50 premières rues", "200 premières rues"],
+    },
   },
   mapSection: {
     kicker: "Carte",
