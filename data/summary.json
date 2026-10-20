@@ -1,0 +1,45 @@
+{
+  "slice": "City of Toronto open data 'Parking Tickets', calendar years 2023-2025, retrieved 2026-10-08",
+  "total_tickets_in_slice": 6454695,
+  "rows_with_bad_date": 1,
+  "rows_without_street": 579,
+  "tickets_with_street": 6454115,
+  "total_winter_tickets": 2008589,
+  "total_summer_tickets": 2197757,
+  "winter_days": 364,
+  "summer_days": 366,
+  "distinct_streets": 15497,
+  "meter_tickets_all_years": 1157660,
+  "model": {
+    "blended_revenue_per_transaction": 5.47,
+    "onstreet_transactions_per_year": 12371574,
+    "meter_tickets_per_year": 385887,
+    "sessions_per_meter_ticket": 32.1,
+    "rate_band_low": 1.5,
+    "rate_band_high": 6.75,
+    "paid_hours_low": 1.0,
+    "paid_hours_high": 2.0,
+    "snow_loss_low": 0.05,
+    "snow_loss_high": 0.15,
+    "estimable_min_winter_meter_tickets": 100,
+    "value_of_one_lost_onstreet_space_per_year": 3224
+  },
+  "top_street": {
+    "street": "YONGE ST",
+    "winter_tickets": 56769,
+    "summer_tickets": 48441,
+    "winter_share_city_pct": 2.8263,
+    "revenue_low": 11225,
+    "revenue_high": 303076
+  },
+  "concentration": {
+    "top10_winter_share": 0.153,
+    "top50_winter_share": 0.3162,
+    "top10_summer_share": 0.1253,
+    "top50_summer_share": 0.2858,
+    "gini_winter": 0.8958,
+    "gini_summer": 0.9019
+  },
+  "ward_matched_winter_tickets": 1751862,
+  "ward_matched_summer_tickets": 1895399
+}

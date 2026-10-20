@@ -1,0 +1,233 @@
+{
+  "total_winter_tickets": 2008589,
+  "total_summer_tickets": 2197757,
+  "winter_days": 364,
+  "summer_days": 366,
+  "distinct_streets_winter": 12184,
+  "distinct_streets_summer": 12067,
+  "top10_winter_share": 0.153,
+  "top50_winter_share": 0.3162,
+  "top10_summer_share": 0.1253,
+  "top50_summer_share": 0.2858,
+  "gini_winter": 0.8958,
+  "gini_summer": 0.9019,
+  "rank_table": [
+    {
+      "top_n_streets": 1,
+      "winter_share": 0.0283,
+      "summer_share": 0.022
+    },
+    {
+      "top_n_streets": 5,
+      "winter_share": 0.0989,
+      "summer_share": 0.0798
+    },
+    {
+      "top_n_streets": 10,
+      "winter_share": 0.153,
+      "summer_share": 0.1253
+    },
+    {
+      "top_n_streets": 25,
+      "winter_share": 0.2349,
+      "summer_share": 0.2044
+    },
+    {
+      "top_n_streets": 50,
+      "winter_share": 0.3162,
+      "summer_share": 0.2858
+    },
+    {
+      "top_n_streets": 100,
+      "winter_share": 0.412,
+      "summer_share": 0.3866
+    },
+    {
+      "top_n_streets": 200,
+      "winter_share": 0.5317,
+      "summer_share": 0.5195
+    },
+    {
+      "top_n_streets": 500,
+      "winter_share": 0.7006,
+      "summer_share": 0.7059
+    },
+    {
+      "top_n_streets": 1000,
+      "winter_share": 0.8186,
+      "summer_share": 0.8303
+    }
+  ],
+  "lorenz_winter": [
+    {
+      "top_fraction_of_streets": 0.0,
+      "share_of_tickets": 0.0
+    },
+    {
+      "top_fraction_of_streets": 0.05,
+      "share_of_tickets": 0.7366
+    },
+    {
+      "top_fraction_of_streets": 0.1,
+      "share_of_tickets": 0.8479
+    },
+    {
+      "top_fraction_of_streets": 0.15,
+      "share_of_tickets": 0.8998
+    },
+    {
+      "top_fraction_of_streets": 0.2,
+      "share_of_tickets": 0.9306
+    },
+    {
+      "top_fraction_of_streets": 0.25,
+      "share_of_tickets": 0.9509
+    },
+    {
+      "top_fraction_of_streets": 0.3,
+      "share_of_tickets": 0.965
+    },
+    {
+      "top_fraction_of_streets": 0.35,
+      "share_of_tickets": 0.9752
+    },
+    {
+      "top_fraction_of_streets": 0.4,
+      "share_of_tickets": 0.9824
+    },
+    {
+      "top_fraction_of_streets": 0.45,
+      "share_of_tickets": 0.9875
+    },
+    {
+      "top_fraction_of_streets": 0.5,
+      "share_of_tickets": 0.9913
+    },
+    {
+      "top_fraction_of_streets": 0.55,
+      "share_of_tickets": 0.9939
+    },
+    {
+      "top_fraction_of_streets": 0.6,
+      "share_of_tickets": 0.9957
+    },
+    {
+      "top_fraction_of_streets": 0.65,
+      "share_of_tickets": 0.9969
+    },
+    {
+      "top_fraction_of_streets": 0.7,
+      "share_of_tickets": 0.9978
+    },
+    {
+      "top_fraction_of_streets": 0.75,
+      "share_of_tickets": 0.9984
+    },
+    {
+      "top_fraction_of_streets": 0.8,
+      "share_of_tickets": 0.9988
+    },
+    {
+      "top_fraction_of_streets": 0.85,
+      "share_of_tickets": 0.9991
+    },
+    {
+      "top_fraction_of_streets": 0.9,
+      "share_of_tickets": 0.9994
+    },
+    {
+      "top_fraction_of_streets": 0.95,
+      "share_of_tickets": 0.9997
+    },
+    {
+      "top_fraction_of_streets": 1.0,
+      "share_of_tickets": 1.0
+    }
+  ],
+  "lorenz_summer": [
+    {
+      "top_fraction_of_streets": 0.0,
+      "share_of_tickets": 0.0
+    },
+    {
+      "top_fraction_of_streets": 0.05,
+      "share_of_tickets": 0.7418
+    },
+    {
+      "top_fraction_of_streets": 0.1,
+      "share_of_tickets": 0.8593
+    },
+    {
+      "top_fraction_of_streets": 0.15,
+      "share_of_tickets": 0.912
+    },
+    {
+      "top_fraction_of_streets": 0.2,
+      "share_of_tickets": 0.9416
+    },
+    {
+      "top_fraction_of_streets": 0.25,
+      "share_of_tickets": 0.9599
+    },
+    {
+      "top_fraction_of_streets": 0.3,
+      "share_of_tickets": 0.9721
+    },
+    {
+      "top_fraction_of_streets": 0.35,
+      "share_of_tickets": 0.9803
+    },
+    {
+      "top_fraction_of_streets": 0.4,
+      "share_of_tickets": 0.9861
+    },
+    {
+      "top_fraction_of_streets": 0.45,
+      "share_of_tickets": 0.9902
+    },
+    {
+      "top_fraction_of_streets": 0.5,
+      "share_of_tickets": 0.993
+    },
+    {
+      "top_fraction_of_streets": 0.55,
+      "share_of_tickets": 0.995
+    },
+    {
+      "top_fraction_of_streets": 0.6,
+      "share_of_tickets": 0.9964
+    },
+    {
+      "top_fraction_of_streets": 0.65,
+      "share_of_tickets": 0.9974
+    },
+    {
+      "top_fraction_of_streets": 0.7,
+      "share_of_tickets": 0.9981
+    },
+    {
+      "top_fraction_of_streets": 0.75,
+      "share_of_tickets": 0.9986
+    },
+    {
+      "top_fraction_of_streets": 0.8,
+      "share_of_tickets": 0.9989
+    },
+    {
+      "top_fraction_of_streets": 0.85,
+      "share_of_tickets": 0.9992
+    },
+    {
+      "top_fraction_of_streets": 0.9,
+      "share_of_tickets": 0.9995
+    },
+    {
+      "top_fraction_of_streets": 0.95,
+      "share_of_tickets": 0.9997
+    },
+    {
+      "top_fraction_of_streets": 1.0,
+      "share_of_tickets": 1.0
+    }
+  ]
+}
